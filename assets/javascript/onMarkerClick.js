@@ -64,6 +64,10 @@ function callback(place, status) {
             //console.log(place.photos[0].getUrl({'maxWidth': 500, 'maxHeight': 400}));
             $('.placeholder').attr('src', place.photos[0].getUrl({'maxWidth': 500, 'maxHeight': 400}));
         }
+        else if (place.name === 'Rodeo Drive') {
+            console.log('name = Rodeo Drive');
+            $('.placeholder').attr('src', 'assets/images/2rodeo.jpeg');
+        }
         if (infoWindow !== null) {
             infoWindow.close(map);
         }
