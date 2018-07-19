@@ -3,6 +3,7 @@
 //will highlight div corresponding to the clicked
 //marker
 
+var infoWindow = null; 
 
 function captureMarkerClicks() {
     console.log('click');
@@ -60,14 +61,16 @@ function callback(place, status) {
         console.log(place);
         var contentString = "<div class='info-window-content'>" + "<p>" + place.name + "</p><p>" + place.formatted_address + "</p><p>" + place.formatted_phone_number + "</p><p><a href='" + place.website + "'target='_blank'>" + place.name + "</a></p>" + "<img src='" + "</div>"
         if(place.photos) {
-            console.log(place.photos[0].getUrl({'maxWidth': 500, 'maxHeight': 400}));
+            //console.log(place.photos[0].getUrl({'maxWidth': 500, 'maxHeight': 400}));
             $('.placeholder').attr('src', place.photos[0].getUrl({'maxWidth': 500, 'maxHeight': 400}));
         }
-        var infoWindow = new google.maps.InfoWindow({
+        if (infoWindow !== null) {
+            infoWindow.close(map);
+        }
+        infoWindow = new google.maps.InfoWindow({
             content: contentString,
             position: {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()}
         });
         infoWindow.open(map);
-
     }
 }
