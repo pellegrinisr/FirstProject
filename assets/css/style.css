@@ -108,7 +108,7 @@ img {
     color: #032b2f;
     font-size: 24px;
 }
-@media (max-width: 575.98px) {
+/* @media (max-width: 575.98px) {
 
     h1 {
         font-size: 35px;
@@ -216,9 +216,9 @@ img {
            font-size: 24px;
     }
    
-}
+} */
        
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 0) and (max-width: 991.98px) {
 
     /* h1 {
         font-size: 40px;
