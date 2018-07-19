@@ -1,5 +1,6 @@
 body {
     background-color: #D0d3c5;
+    height: 100%;
 }
 h1 {
     padding-bottom: 15px;
@@ -7,6 +8,22 @@ h1 {
 h2 {
     padding-top: 15px;
     margin-bottom: 40px;
+}
+.container {
+    max-width: 1500px;
+    height: 100%;
+}
+.formRow {
+    width: 100%;
+
+}
+#map {
+    height: 20rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border: 1px solid #032b2f;
+    max-width: 40rem;
 }
 .panel-heading {
     color:#08708a;
@@ -30,6 +47,12 @@ label {
     margin-left:25px;
     margin-right:10px;
 }
+.type-label {
+    float: left;
+}
+.type {
+    float: left;    
+}
 option {
     background-color:#D0d3c5;
     color:#08708a;
@@ -42,6 +65,13 @@ option {
     border-color: #032b2f;
     color: white;
     margin: 30px; 
+}
+.form-row {
+    margin-left: auto;
+    margin-right: auto;
+}
+.output {
+    border: 1px solid black;
 }
 #description, #map {
     color: #08708a;
@@ -68,8 +98,7 @@ img {
     position:relative;
 }
 .placeholder {
-    height:400px;
-    width:400px;
+    height: 20rem;
 }
 .modal {
     font-family: "lato";
@@ -77,9 +106,15 @@ img {
     font-size: 24px;
 }
 @media (max-width: 575.98px) {
+
     h1 {
         font-size: 35px;
         padding-bottom: 20px;
+    }
+    .map-col {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
     }
     h2 {
         font-size: 25px;
@@ -121,8 +156,10 @@ img {
     #description, #map {
         font-size: 24px;
     }
+    
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
+
     h1 {
            font-size: 36px;
            padding-bottom: 10px;
@@ -179,23 +216,24 @@ img {
 }
        
 @media (min-width: 768px) and (max-width: 991.98px) {
-    h1 {
+
+    /* h1 {
         font-size: 40px;
         padding-bottom: 10px;
-    }
-    h2 {
+    } */
+    /* h2 {
         font-size: 38px;
         margin-bottom: 30px;
-    }
+    } */
     .panel-heading {
-        font-size: 30px;
+        font-size: 3rem;
     }
     label {
-        font-size: 17px;
+        font-size: 2rem;
         margin-bottom: 1px;
        
     }
-    
+
     .form-control {
         font-size: 17px;
         padding: 5px;
@@ -203,7 +241,7 @@ img {
         margin-top: 10px;
     }
     option {
-        font-size: 18px;
+        font-size: .5rem;
     }
     #submit {
         font-size:18px;
@@ -213,16 +251,21 @@ img {
         margin-bottom: 5px;
        
     }
-    img {
+    /* img {
         height:130px;
         width:200px;
-    }
+    } */
     .placeholder {
-        height:360px;
-        width:360px;
+        /* height:360px; */
+        width: 40rem;
     }
     #description, #map {
         font-size: 24px;
+    }
+    #map {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
     
