@@ -17,7 +17,7 @@ function placeMarker(coordinates, name, type) {
         icon: iconLink
     });
     markerArray.push(marker);
-	google.maps.event.addListener(marker, 'click tap', captureMarkerClicks);
+	google.maps.event.addListener(marker, 'click', captureMarkerClicks);
 }
 
 

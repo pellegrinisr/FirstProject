@@ -3,7 +3,7 @@ var divArray = [];
 var submitClicked = false;
 
 //event handler for the submit button
-$('#submit').on('click touch', function(event) {
+$('#submit').on('click', function(event) {
     event.preventDefault();
     submitClicked = true;
     for (var i = 0; i < markerArray.length; i++) {

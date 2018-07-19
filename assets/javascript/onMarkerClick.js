@@ -5,6 +5,7 @@
 
 
 function captureMarkerClicks() {
+    console.log('click');
     if (submitClicked === true) {
         console.log(this.title);
 		var backgroundColor = $('body').css('background-color');
